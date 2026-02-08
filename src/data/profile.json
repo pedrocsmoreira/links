@@ -1,0 +1,32 @@
+{
+  "name": "Your Name",
+  "bio": "Developer, creator, and coffee enthusiast.",
+  "avatar": "/avatar.svg",
+  "links": [
+    {
+      "title": "Portfolio",
+      "url": "https://yourportfolio.com",
+      "description": "Check out my work"
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com/yourusername",
+      "icon": "github"
+    },
+    {
+      "title": "Twitter / X",
+      "url": "https://x.com/yourusername",
+      "icon": "twitter"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://linkedin.com/in/yourusername",
+      "icon": "linkedin"
+    },
+    {
+      "title": "Email Me",
+      "url": "mailto:hello@example.com",
+      "icon": "mail"
+    }
+  ]
+}

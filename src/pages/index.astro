@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import LinkButton from "../components/LinkButton.astro";
+import profile from "../data/profile.json";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{profile.name} | Links</title>
+    <meta name="title" content={`${profile.name} | Links`} />
+    <meta name="description" content={profile.bio} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${profile.name} | Links`} />
+    <meta property="og:description" content={profile.bio} />
+    <meta property="og:image" content={profile.avatar} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={`${profile.name} | Links`} />
+    <meta property="twitter:description" content={profile.bio} />
+    <meta property="twitter:image" content={profile.avatar} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body class="flex min-h-screen items-center justify-center p-6">
+    <main class="w-full max-w-md animate-fade-in">
+      <!-- Profile Section -->
+      <div class="mb-8 flex flex-col items-center text-center">
+        <div class="mb-4 h-24 w-24 overflow-hidden rounded-full bg-muted ring-2 ring-border">
+          <img
+            src={profile.avatar}
+            alt={profile.name}
+            class="h-full w-full object-cover"
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <h1 class="text-2xl font-semibold text-foreground">{profile.name}</h1>
+        <p class="mt-1 text-muted-foreground">{profile.bio}</p>
+      </div>
+      
+      <!-- Links Section -->
+      <div class="flex flex-col gap-3">
+        {profile.links.map((link) => (
+          <LinkButton
+            title={link.title}
+            url={link.url}
+            description={link.description}
+            icon={link.icon}
+          />
+        ))}
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+</style>
