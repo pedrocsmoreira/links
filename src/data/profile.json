@@ -1,16 +1,16 @@
 {
-  "name": "Your Name",
+  "name": "Pedro Moreira",
   "bio": "Developer, creator, and coffee enthusiast.",
   "avatar": "/avatar.svg",
   "links": [
     {
       "title": "Portfolio",
-      "url": "https://yourportfolio.com",
+      "url": "https://pcsm.me",
       "description": "Check out my work"
     },
     {
       "title": "GitHub",
-      "url": "https://github.com/yourusername",
+      "url": "https://github.com/pedrocsmoreira",
       "icon": "github"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "title": "LinkedIn",
-      "url": "https://linkedin.com/in/yourusername",
+      "url": "https://linkedin.com/in/pedrocsmoreira",
       "icon": "linkedin"
     },
     {
